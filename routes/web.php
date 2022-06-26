@@ -246,7 +246,6 @@ Route::group([
         if(can('permissions'))
         {
             Route::resource('/role', 'WEB\Admin\RoleController');
-           // Route::resources('roles','WEB\Admin\RoleController');
         }
  
    
