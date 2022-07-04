@@ -23,8 +23,9 @@ use Illuminate\Http\Request;
     Route::get('/getCategories', 'API\AppController@getCategories');  
 
     Route::get('/getPackages', 'API\AppController@getPackages');  
-    Route::get('/getPackageDetails', 'API\AppController@getPackageDetails');  
+    Route::get('/getPackageDetails', 'API\AppController@getPackageDetails'); 
 
+   // Route::get('/post',[PostController::class,'index'],);
 
 
     
