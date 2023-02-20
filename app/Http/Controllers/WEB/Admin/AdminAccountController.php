@@ -30,15 +30,6 @@ use Illuminate\Support\Facades\Validator;
 class AdminAccountController extends Controller
 {
 
-
-    public function __construct()
-    {
-        $this->settings = Setting::query()->first();
-        view()->share(['settings' => $this->settings]);
-    }
-
-
-
     public function index(Request $request)
     {
         $items = User::query();

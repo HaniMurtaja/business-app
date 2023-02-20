@@ -162,15 +162,14 @@ class UserController extends Controller
             }
 
 
-            // $code = rand(1000, 9999);
+           
             $code = 1111;
             $conf = new Code();
             $conf->code = $code;
             $conf->user_id = $newUser->id;
             $conf->save();
             
-            // $mobileMsg = __('api.YourActivationCodeIs') . ' ' . $code;  
-            // Twilio::message(substr($request->mobile, 2), $mobileMsg);    
+           
             
             return response()->json(['status' => true, 'code' => 200, 'message' => __('api.ok'), 'user' => $newUser]);
         }
@@ -447,8 +446,7 @@ class UserController extends Controller
             $conf->user_id = $checkUser->id;
             $conf->save();
             
-            // $mobileMsg = __('api.YourActivationCodeIs') . ' ' . $code;  
-            // Twilio::message(substr($request->mobile, 2), $mobileMsg); 
+        
             
             return response()->json(['status' => true, 'code' => 200, 'message' => __('api.ok'), 'code' => $conf->code]);
         }    

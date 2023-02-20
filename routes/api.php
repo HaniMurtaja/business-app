@@ -24,45 +24,6 @@ use Illuminate\Http\Request;
 
     Route::get('/getPackages', 'API\AppController@getPackages');  
     Route::get('/getPackageDetails', 'API\AppController@getPackageDetails'); 
-
-   // Route::get('/post',[PostController::class,'index'],);
-
-
-    
-    
-    
-    // Route::get('/getAds', 'API\AppController@getAds');  
-    // Route::get('/getMap', 'API\AppController@getMap');  
-    // Route::get('/getRelatedProducts', 'API\AppController@getRelatedProducts');  
-    // Route::get('/getAllEvents', 'API\AppController@getAllEvents');  
-    // Route::get('/eventDetails', 'API\AppController@eventDetails');  
-    // Route::get('/getAllGalleries', 'API\AppController@getAllGalleries');  
-    // Route::get('/galleriesDetails', 'API\AppController@galleriesDetails');  
-    // Route::get('/getAllArticles', 'API\AppController@getAllArticles');  
-    // Route::get('/articleDetails', 'API\AppController@articleDetails');  
-    // Route::get('/teamMemberdetails', 'API\AppController@teamMemberdetails');  
-
-    // Route::get('/getCitiesByCountry', 'API\AppController@getCitiesByCountry');  
-    // Route::get('/getCompetitionBrand', 'API\AppController@getCompetitionBrand');  
-    // Route::get('/getCompetitionModel', 'API\AppController@getCompetitionModel');  
-    // Route::get('/getYears', 'API\AppController@getYears');  
-    // Route::get('/getCompetitionCategory', 'API\AppController@getCompetitionCategory');  
-    // Route::get('/getCompetitionOtherCategory', 'API\AppController@getCompetitionOtherCategory');  
-    // Route::get('/getPaymentMethod', 'API\AppController@getPaymentMethod');  
-    // Route::get('/getCompetitionQuestion', 'API\AppController@getCompetitionQuestion');  
-    // Route::get('competitionResults', 'API\AppController@competitionResults');
-
-    // Route::get('/carDetails', 'API\AppController@carDetails'); 
-    // Route::get('/scanCode', 'API\AppController@scanCode'); 
-    // Route::get('/ratedCars', 'API\AppController@ratedCars'); 
-
-
-    // Route::post('/loginBySocial', 'API\UserController@loginBySocial'); 
-    
-
-
-
-
     
     Route::group(['middleware' => 'auth:api'], function () {
 
@@ -89,69 +50,6 @@ use Illuminate\Http\Request;
 
         Route::get('/getChatMessage','API\ChatController@getChatMessage');
         Route::post('/sendMessage','API\ChatController@sendMessage');
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // Route::post('createNewArticle', 'API\AppController@createNewArticle');
-        // Route::post('createNewVolunteer', 'API\AppController@createNewVolunteer');
-
-
-        // Route::post('createCompetitionRegistration', 'API\AppController@createCompetitionRegistration');
-
-
-        // Route::post('/reserve_location_now', 'API\AppController@reserve_location_now');
-        
-        
-        // Route::get('/getMyAddresses', 'API\UserController@getMyAddresses');
-        // Route::post('/addNewAddress', 'API\UserController@addNewAddress');
-        // Route::post('/editMyAddress', 'API\UserController@editMyAddress');
-        // Route::get('/deleteMyAddress', 'API\UserController@deleteMyAddress');
-        
-        
-        // Route::post('checkout', 'API\CartController@checkout');
-        // Route::get('myOrders', 'API\AppController@myOrders');
-
-        // Route::get('/adminHomeScreen', 'API\AppController@adminHomeScreen'); 
-
-        // Route::get('/evaluationHomeScreen', 'API\AppController@evaluationHomeScreen'); 
-        
-        
-        
-        // Route::get('ourClientsList', 'API\AppController@ourClientsList');
-        // Route::get('rateOrder', 'API\AppController@rateOrder');
-        // Route::get('myRewards', 'API\AppController@myRewards');
-        // Route::get('/getOurStatistics', 'API\AppController@getOurStatistics');  
-
-
-
-        // Route::get('myFavoriteProducts', 'API\AppController@myFavoriteProducts'); 
-        // Route::get('addToFavoriteProduct', 'API\AppController@addToFavoriteProduct'); 
-        // Route::get('unFavoriteProduct', 'API\AppController@unFavoriteProduct'); 
-
-        
-        
-        // Route::post('/addProductToCart', 'API\CartController@addProductToCart');
-        // Route::get('/deleteFromCart', 'API\CartController@deleteFromCart');
-        // Route::post('/changeQuantity', 'API\CartController@changeQuantity');
-        // Route::get('/myCart', 'API\CartController@myCart');
-        
-        
-    
-        
-        
-        // Route::post('/checkCoupon', 'API\CartController@checkCoupon');
-        
-        
-        // Route::get('/cartItemsCount', 'API\AppController@cartItemsCount');  
-
-
 
     });
 

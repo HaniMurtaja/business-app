@@ -43,7 +43,7 @@ class NotificationMessageController extends Controller
 
     public function create()
     {
-        // $usersList = User::query()->where('status','active')/*->orderBy('name','ASC')*/->get();
+        
         return view('admin.notifications.create');
     }
 

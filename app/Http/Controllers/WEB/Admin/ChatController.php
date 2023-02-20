@@ -49,7 +49,7 @@ class ChatController extends Controller
         
         $usersChat = Chat::where('user1', auth()->guard('admin')->user()->id)->get();
 
-        // $usersChat = ChatMessage::whereIn('chat_id', $chatsIDs)->groupBy('chat_id')->latest()->get();
+     
         
         return view('admin.chatting.staff_chat', ['usersChat' => $usersChat]);
     }

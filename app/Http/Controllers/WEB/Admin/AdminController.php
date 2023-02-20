@@ -26,18 +26,6 @@ use Image;
 class AdminController extends Controller
 {
 
-    public function image_extensions(){
-        return array('jpg','png','jpeg','gif','bmp','pdf');
-    }
-
-
-    public function __construct()
-    {
-        $this->settings = Setting::query()->first();
-        view()->share(['settings' => $this->settings]);
-    }
-
-
     public function index(Request $request)
     {
 

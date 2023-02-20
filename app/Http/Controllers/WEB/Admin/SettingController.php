@@ -58,7 +58,7 @@ class SettingController extends Controller
         $setting = Setting::query()->findOrFail(1);
         
         $counter_time =  date('Y/m/d h:i:s', strtotime($request->counter_time));
-        // return $counter_time;
+     
         
 
         $setting->url = trim($request->get('url'));
@@ -72,10 +72,6 @@ class SettingController extends Controller
         $setting->twitter = trim($request->get('twitter'));
         $setting->linked_in = trim($request->get('linked_in'));
         $setting->instagram = trim($request->get('instagram'));
-        // $setting->counter_time = $counter_time;
-        // $setting->counter_yes_no = trim($request->get('counter_yes_no'));
-        // $setting->delivery_cost_by_meter = trim($request->get('delivery_cost_by_meter'));
-
         $setting->latitude = trim($request->get('latitude'));
         $setting->longitude = trim($request->get('longitude'));
 
@@ -93,9 +89,7 @@ class SettingController extends Controller
             $image = $request->file('image');
             $extention = $image->getClientOriginalExtension();
             $file_name = str_random(15) . "" . rand(1000000, 9999999) . "" . time() . "_" . rand(1000000, 9999999) . "." . $extention;
-           /* Image::make($image)->resize(800, null, function ($constraint) {
-                $constraint->aspectRatio();
-            })->save("uploads/settings/$file_name");*/
+     
             
             $image->move("uploads/settings/", $file_name);
             

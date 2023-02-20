@@ -16,6 +16,7 @@ class RoleController extends Controller
 {
     public function __construct()
     {
+
         $this->locales = Language::all();
         $this->settings = Setting::query()->first();
         view()->share([
@@ -24,6 +25,7 @@ class RoleController extends Controller
 
         ]);
     }
+
 
     public function image_extensions(){
 
@@ -45,10 +47,13 @@ class RoleController extends Controller
 
     }
 
+
+
     public function create()
     {
         return view('admin.role.create');
     }
+
 
     public function store(Request $request)
     {
@@ -72,10 +77,12 @@ class RoleController extends Controller
         return redirect()->back()->with('status', __('cp.create'));
     }
 
+
     public function show($id)
     {
         return Permission::query()->findOrFail($id);
     }
+
 
     public function edit($id)
     {
@@ -84,6 +91,7 @@ class RoleController extends Controller
             'item' => $item,
         ]);
     }
+
 
     public function update(Request $request, $id)
     {
@@ -104,6 +112,7 @@ class RoleController extends Controller
 
     }
 
+    
     public function destroy($id)
     {
         $item = Permission::query()->findOrFail($id);

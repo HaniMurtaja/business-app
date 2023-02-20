@@ -53,8 +53,7 @@ class ProductController extends Controller
         $message = __('api.ok');
         return response()->json(['status' => true, 'code' => 200, 'message' => $message,'products' => $products ]);
     }
-    
-    
+        
 
     public function getOffers(Request $request)
     {
@@ -78,22 +77,8 @@ class ProductController extends Controller
     }
     public function topSaling()
     {
-       // $last_products = Product::where('status', 'active')->orderBy('created_at','desc')->take(10)->get();
-       // $most_sale_products = OrderProduct::orderBy('created_at','desc')->take(10)->with('product')->get();
-        //  $most_sale_products= DB::table('order_products')
-        //   ->select('order_products.*',DB::raw('COUNT(product_id) as count'))
-        //   ->groupBy('product_id')
-        //   ->orderBy('count','desc')
-        //   ->join('products', 'products.id' , '=', 'order_products.product_id' )
-        //   ->get();
-           
-        // $most_sale_products=OrderProduct::select('product_id')
-        // ->groupBy('product_id')
-        // ->orderByRaw('COUNT(*) DESC')
-        // ->take(10)
-        //  ->with('product')
-        // ->paginate(20);
-        $most_sale_products = Product::where('status', 'active')->orderBy('top_selling','desc')->orderBy('created_at','desc')->paginate(200000);
+      
+      $most_sale_products = Product::where('status', 'active')->orderBy('top_selling','desc')->orderBy('created_at','desc')->paginate(200000);
 
 
         
@@ -177,6 +162,7 @@ class ProductController extends Controller
 
 
     }
+    
     public function filter(Request $request)
     {
         $products = Product::where('status','active');

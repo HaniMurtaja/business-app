@@ -46,7 +46,6 @@ class NotificationController extends Controller
             $message = __('api.not_found_notification');
             return mainResponse(true, $message, $notifications, 203, 'items', '');
 
-            // return mainResponse(true, $message, $cart, 203, 'items', '');
         }
     }
 

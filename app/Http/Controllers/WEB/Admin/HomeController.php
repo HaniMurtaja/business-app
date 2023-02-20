@@ -29,13 +29,6 @@ class HomeController extends Controller
    
     public function index()
     {
-        // $admin = Admin::findOrFail(auth()->guard('admin')->user()->id);
-        // $competitions_registrations  = CompetitionRegistration::latest('id')->take(9)->get();
-        // $contacts  = Contact::latest('id')->take(10)->get();
-        // $articles  = Article::latest('id')->take(5)->get();
-        // $events  = Event::latest('id')->take(5)->get();
-        // $galleries  = Gallery::latest('id')->take(5)->get();
-
         return view('admin.home.dashboard');
     }
 

@@ -90,10 +90,7 @@ class EmployeeController extends Controller
         $item->name = $request->name;
         $item->email = $request->email;
         $item->mobile = $request->mobile;
-        // $item->address = $request->address;
         $item->password = bcrypt($request->password);
-        // $item->latitude = $request->lat;
-        // $item->longitude = $request->lng;
         $item->status = 'active';
         $item->salary_type = $request->salary_type;
         $item->salary_amount = $request->salary_amount;

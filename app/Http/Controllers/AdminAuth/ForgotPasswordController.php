@@ -66,15 +66,14 @@ class ForgotPasswordController extends Controller
             return redirect()->back()->with('error','The email is required');
         
         }
-        //$this->validate($request, ['email' => 'required|email']);
+       
+        
         if (!$validator->fails()) { // accept Json header
             $user = Admin::where('email', $request->input('email'))->first();
             if (!$user) {
                 return redirect()->back()->with('error','The email not found');
             }
             $token = $this->broker()->createToken($user);
-            //$url = url('/password/reset/' . $token);
-            //$user->notify(new ResetPassword($token));
             $message_ar = 'تم إرسال رابط تعيين كلمة المرور للبريد الإلكتروني المدخل';
             $message_en = 'Reset password link have been sent to your email address';
             $error=__('errors.reset_pass');

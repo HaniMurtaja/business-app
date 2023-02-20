@@ -39,7 +39,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $roles = [
-            // 'logo' => 'required|image|mimes:jpeg,jpg,png',
+           
         ];
 
         $locales = Language::all()->pluck('lang');

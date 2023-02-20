@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "59eb4c63-d9ce-482b-93db-abbc27a25709",
+		"name": "For Hani",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19071564"
+	},
+	"item": [
+		{
+			"name": "settings Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{link}}settings",
+					"host": [
+						"{{link}}settings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "homeScreen Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{link}}homeScreen",
+					"host": [
+						"{{link}}homeScreen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getServicesByCategory Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{link}}getServicesByCategory?category_id=1",
+					"host": [
+						"{{link}}getServicesByCategory"
+					],
+					"query": [
+						{
+							"key": "category_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getServicesDetails Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{link}}getServicesDetails?service_id=30",
+					"host": [
+						"{{link}}getServicesDetails"
+					],
+					"query": [
+						{
+							"key": "service_id",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCategories Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{link}}getCategories",
+					"host": [
+						"{{link}}getCategories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pageDetails Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "page_id",
+						"value": "10",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "locale",
+						"value": "ar",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{link}}pageDetails?page_id=10",
+					"host": [
+						"{{link}}pageDetails"
+					],
+					"query": [
+						{
+							"key": "locale",
+							"value": "ar",
+							"disabled": true
+						},
+						{
+							"key": "page_id",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMyProjectDetails Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "page_id",
+						"value": "10",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "locale",
+						"value": "ar",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{link}}getMyProjectDetails",
+					"host": [
+						"{{link}}getMyProjectDetails"
+					],
+					"query": [
+						{
+							"key": "locale",
+							"value": "ar",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMyPackages Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "page_id",
+						"value": "10",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "locale",
+						"value": "ar",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{link}}getMyPackages",
+					"host": [
+						"{{link}}getMyPackages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signUpUsers Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mobile",
+							"value": "0599853199",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass*123@ahmedraedsiam#Bluearston",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "pass*123@ahmedraedsiam#Bluearston",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "user",
+							"type": "text"
+						},
+						{
+							"key": "device_type",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "fcm_token",
+							"value": "c1-4t2YzST-HK87f-OXVKt:APA91bHiJwmxgj96cJ3ZTJXj7lO5t2despylVtEnCruqbX9gk6oxK3m9XZQjwSrP5XI7nKucfy136hz40-mBqWAsY5dRBX--5MsvrLJSKjEbUrjeYUGumGxlQNFrET76PT3weffAumsd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{link}}signUpUsers",
+					"host": [
+						"{{link}}signUpUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loginForUsers Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mobile",
+							"value": "0599853199",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass*123@ahmedraedsiam#Bluearston",
+							"type": "text"
+						},
+						{
+							"key": "fcm_token",
+							"value": "c1-4t2YzST-HK87f-OXVKt:APA91bHiJwmxgj96cJ3ZTJXj7lO5t2despylVtEnCruqbX9gk6oxK3m9XZQjwSrP5XI7nKucfy136hz40-mBqWAsY5dRBX--5MsvrLJSKjEbUrjeYUGumGxlQNFrET76PT3weffAumsd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{link}}loginForUsers",
+					"host": [
+						"{{link}}loginForUsers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
